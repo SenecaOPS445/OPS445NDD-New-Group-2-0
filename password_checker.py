@@ -14,3 +14,21 @@ def check_password(password, verbose=False):
       - Include at least one special character.
     Returns a message that either confirms the password is strong or lists the specific security issues found.
     """
+    issues = []     #List to store any password problems
+
+    if len(password) < 8: # Checks if password is short or have lesser than 8 characters
+        issues.append("Password must be at least 8 characters long.")
+
+    if not any(c.islower() for c in password): # Check users promt if there is a lowercase letter
+        issues.append("Password must include at least one lowercase letter.")
+    if not any(c.isupper() for c in password): # Check users prompt if there is a lowercase letter
+        issues.append("Password must include at least one uppercase letter.")
+
+    if not any(c.isdigit() for c in password): # Check users prompt if there is a number given
+        issues.append("Password must include at least one digit.")
+
+    if not any(c in string.punctuation for c in password): # Checks users prompt if there is a special character given
+        issues.append("Password must include at least one special character.")
+
+    if verbose: # If user wants detailed output
+        
