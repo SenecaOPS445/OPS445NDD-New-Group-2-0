@@ -8,9 +8,9 @@ This script integrates the functionalities from our group.
 import sys      # For exit function and error codes
 
 # Import functions from our group members' modules
-# Member 1's module
-# Member 2's module
-# Member 3's module
+from password_generator import generate_password    # Member 1's module
+from password_checker import check_password     # Member 2's module
+# from argument_parser import parse_arguments     # Member 3's module
 
 def main():
     # Get arguments
@@ -22,6 +22,10 @@ def main():
             sys.exit(1)     # Exit if error
 
         pwd = generate_password(args.length)    # Create password
+
+        if args.verbose:    # Show info if verbose
+            print("Generated password details:")
+            print("Allowed characters include letters, digits, and punctuation.")
 
         print("Generated password:", pwd)   # Show the password
 
