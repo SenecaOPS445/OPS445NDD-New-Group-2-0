@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Student ID: [your_seneca_id] (Group Member 1)
+# Student ID: pk-c2 (Group Member 3)
 
 import random   # For random selection
 import string   # For character sets
