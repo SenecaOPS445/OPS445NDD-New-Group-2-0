@@ -31,4 +31,16 @@ def check_password(password, verbose=False):
         issues.append("Password must include at least one special character.")
 
     if verbose: # If user wants detailed output
+        print("Password analysis:")
+        print("Length:", len(password))     # passwordlength
+        print("Contains lowercase:", any(c.islower() for c in password))    # Show output lowercase result
+        print("Contains uppercase:", any(c.isupper() for c in password))    # Show output uppercase result
+        print("Contains digit:", any(c.isdigit() for c in password))        # Show digits result
+        print("Contains special character:", any(c in string.punctuation for c in password))    # Show special chars result
+
+    if issues:      # If there are any issues
+        return "Weak password. Issues:\n" + "\n".join(issues)   # Return all issues
+    else:       # No issues found
+        return "Strong password."   # Password is strong
+
         
