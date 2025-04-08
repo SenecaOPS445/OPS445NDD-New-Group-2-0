@@ -35,14 +35,22 @@ The project is divided into four files:
 
 ## Command-Line Arguments and Options
 - **Subcommands**:
-  - `generate` — Generates a random password (e.g. python3 assignment2.py generate).
-  - `check` — Checks the security of a given password (e.g. python3 assignment2.py check P@ssw0rd123!).
+  - `generate` — Generates a random password.
+  - `python3 assignment2.py generate`
+  - `check` — Checks the security of a given password.
+  - `python3 assignment2.py check P@ssw0rd123!`
 - **Options for `generate`**:
-  - `-l, --length`: Number that sets how long the password should be (default is 12) (e.g. python3 assignment2.py generate -l 12 or python3 assignment2.py generate --length 12).
-  - `-v, --verbose`: A flag for showing more details (e.g. python3 assignment2.py generate -l 12 -v or python3 assignment2.py generate --length 12 --verbose).
+  - `-l, --length`: Number that sets how long the password should be (default is 12).
+  - `python3 assignment2.py generate -l 12`
+  -  `python3 assignment2.py generate --length 12`
+  - `-v, --verbose`: A flag for showing more details.
+  - `python3 assignment2.py generate -l 12 -v`
+  - `python3 assignment2.py generate --length 12 --verbose`
 - **Options for `check`**:
   - A required argument: the password to check.
-  - `-v, --verbose`: A flag for detailed feedback during the check (e.g. python3 assignment2.py check P@ssw0rd123! -v or python3 assignment2.py check P@ssw0rd123! --verbose).
+  - `-v, --verbose`: A flag for detailed feedback during the check.
+  - `python3 assignment2.py check P@ssw0rd123! -v`
+  - `python3 assignment2.py check P@ssw0rd123! --verbose`
 
 ## Development Challenges
 - Setting up the command line arguments correctly.
